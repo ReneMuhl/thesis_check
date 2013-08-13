@@ -80,14 +80,3 @@ for matchedFile in matches:
             print("Can not open the file!")
     else:
         print("matchedFile", matchedFile, "doesn't exists!")
-
-
-
-
-
-
-# search all words in this one file
-# create a data structure like a hash map or dictonary of each file with word as key and occurrence as value
-# save it to a file with name of file, date?, hash map or dictonary
-#going to the next file
-
