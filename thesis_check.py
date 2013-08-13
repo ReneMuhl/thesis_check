@@ -74,6 +74,7 @@ for matchedFile in matches:
                             outputString += expletive
                             outputString += ":"
                             outputString += str(content.count(expletive))
+                            outputString = str('\n')
                             outputFile.write(outputString)
                 file.close
         except IOError:
