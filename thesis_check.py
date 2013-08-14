@@ -45,7 +45,7 @@ else:
     print("File with expletives doesn't exists!")
 
 
-# Check if the noise words appear in the found files.
+# Check if the expletives appear in the found files.
 
 # reset file
 with open(OUTPUT_FILENAME, "w") as outputFile:
@@ -56,12 +56,12 @@ with open(OUTPUT_FILENAME, "w") as outputFile:
 for matchedFile in matches:
     matchedFilenameWritten = False
     #print(matchedFile)
-    # Check if expletives file exists and read the content
+    # Check if LaTeX file exists and read the content
     if os.path.isfile(matchedFile):
         #print("matchedFile exists!")
         try:
             with open(matchedFile, 'r') as file:
-                content=file.read()
+                content = file.read()
                 for expletive in expletives:
                     if content.count(expletive) > 1:
                         with open(OUTPUT_FILENAME, "a") as outputFile:
