@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# 2do:
+# Groß-und Kleinschreibung beim Suchen ignorieren!
+
+
+
+
 import argparse         # parse command line arguments
 import os.path          # test if file/dir exists
 import fnmatch          # test if filename consists of pattern
