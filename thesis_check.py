@@ -3,7 +3,7 @@
 
 # 2do:
 # Groß-und Kleinschreibung beim Suchen ignorieren!
-
+# Konjunktive hinzufügen und "Ich"
 
 
 
