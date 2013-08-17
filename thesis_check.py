@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# 2do:
-# Groß-und Kleinschreibung beim Suchen ignorieren!
-# Konjunktive hinzufügen und "Ich"
-
+#=========================================================
+#author: René Muhl
+#from: Leipzig, Germany
+#last change: 17.08.2013
+#email: ReneM{dot}github{at}gmail{dot}com
+#=========================================================
 
 
 import argparse         # parse command line arguments
@@ -53,7 +55,7 @@ else:
 
 # Check if the expletives appear in the found files.
 
-# reset file
+# reset old output file
 with open(OUTPUT_FILENAME, "w") as outputFile:
     outputFile.write("")
     outputFile.close
@@ -68,22 +70,24 @@ for matchedFile in matches:
         try:
             with open(matchedFile, 'r') as file:
                 content = file.read()
+                contentList = content.lower().split(' ')        #change case of input string to find all expetetives
+                #print(contentList)
                 for expletive in expletives:
-                    if content.count(expletive) > 1:
+                    foundMatch = contentList.count(expletive)
+                    if foundMatch >= 1:
                         with open(OUTPUT_FILENAME, "a") as outputFile:
                             if not matchedFilenameWritten:
+                                matchedFile = str('-'*30 + '\n') + matchedFile + str('\n')
                                 outputFile.write(matchedFile)
+                                print(matchedFile)
                                 matchedFilenameWritten = True
-                            print(matchedFile)
-                            print(expletive, ":", content.count(expletive), "\n")
-                            outputString = str('\n')
-                            outputString += expletive
-                            outputString += ":"
-                            outputString += str(content.count(expletive))
-                            outputString = str('\n')
+                            outputString = str('\n') + expletive + str(':') + str(foundMatch) + str('\n')
+                            print(outputString)
                             outputFile.write(outputString)
-                file.close
+                            outputFile.close
         except IOError:
             print("Can not open the file!")
     else:
         print("matchedFile", matchedFile, "doesn't exists!")
+file.close
+print("outputFile complete.")

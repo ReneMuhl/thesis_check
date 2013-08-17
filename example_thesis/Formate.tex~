@@ -1,0 +1,7 @@
+\chapter{Formate}
+\section{QCOW2}
+\subsection{Features}
+%Format/Dateiaufbau ansehen mit: root@samoa:/var/lib/nova/instances/1384d180-a663-4628-a3a6-3c186c4f1401# strings - disk
+%https://en.wikipedia.org/wiki/Qcow#Features
+%http://wiki.qemu.org/download/qemu-doc.html
+%http://people.gnome.org/~markmc/qcow-image-format.html

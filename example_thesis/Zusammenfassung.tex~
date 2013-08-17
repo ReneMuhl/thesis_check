@@ -1,0 +1,14 @@
+\chapter{Zusammenfassung}
+\section{Fazit}
+\textbf{Storage sollte das Hauptthema im Fazit sein, evaluierte! Storage-Möglichkeiten} \\
+Das Protokoll bietet bisher nur ein Storage für eine VM. Der Grund dafür ist der Aufbau des Protokolls. Der Empfänger des Volumes ist der Initator/Server,
+von dem es nur einen geben kann. Bereitsteller des Storages ist das Target/der Client von dem mehrere existieren können. Umgedreht wäre es nur eine Platte pro
+VM, aber die Platte kann von unterschiedlichen VMs benutzt werden.\\
+aber Protokoll ist schnell/besitzt wenig Overhead...\\
+
+\section{Ausblick}
+Möglichkeit mit einem Protokoll zu arbeiten, das nicht nur 1:1 Verbindungen zwischen VM und Storage anbietet, wie es iSCSI zur Zeit leistet.
+%Achtung Konjunktiv
+Damit könnte dann Storage zwischen mehreren VMs geteilt werden.
+In der Zukunft könnte der Vorteil der Einfachheit und Performance von dem Format raw nichtig werden, da qcow3 entwickelt wird. Der Grund für dessen Entwicklung ist die fehlende Performance.
+\cit

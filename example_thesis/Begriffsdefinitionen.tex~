@@ -1,0 +1,12 @@
+\chapter{Begriffsdefinitionen - ein Glossar zu Beginn??!}
+Beachte: \\
+aphhabetische Reihenfolge der zu erklärenden Begriffe
+
+\begin{description}
+  \item[virtuelle Machine] Synonym zu Instanz und VM
+  \item[ephemeral storage] 
+  \item[volume storage] 
+  \item[flavor] Ein flavor umfasst in OpenStack diverse Parameter wie Anzahl der CPU-Kerne, RAM, Größen der Partitionen und ähnliches.
+  \item[VM(virtuelle Maschine)/Instanz/virtueller Server]
+  \item[Servervirtualisierung]
+\end{description}
